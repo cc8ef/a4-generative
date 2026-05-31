@@ -54,11 +54,11 @@ function draw() {
 	}
 }
 
-function keyTyped() {
-	if (key === "s" || key === "S") {
-		saveCanvas("Grayscale_Mood_10s", "png");
-	}
-}
+// function keyTyped() {
+// 	if (key === "s" || key === "S") {
+// 		saveCanvas("Grayscale_Mood_10s", "png");
+// 	}
+// }
 
 function Particle(x, y) {
 
@@ -158,44 +158,44 @@ function Particle(x, y) {
 	};
 }
 
-function Particle2(x, y) {
-	this.x = x;
-	this.y = y;
-	this.explode = new Particle(this.x, this.y);
-	this.pos = createVector(this.x, this.y);
-	this.vel = createVector(random(-0.25, 0.25),0);
-	this.acc = createVector(-random(-0.025, 0.025), 0);
-	this.alpha1 = 0;
-	this.alpha2 = 0;
-	this.r = 1;
-	this.color1 = 0;
-	this.color2 = 0;
-	this.grad = 0;
-	this.offset = 0.5;
+// function Particle2(x, y) {
+// 	this.x = x;
+// 	this.y = y;
+// 	this.explode = new Particle(this.x, this.y);
+// 	this.pos = createVector(this.x, this.y);
+// 	this.vel = createVector(random(-0.25, 0.25),0);
+// 	this.acc = createVector(-random(-0.025, 0.025), 0);
+// 	this.alpha1 = 0;
+// 	this.alpha2 = 0;
+// 	this.r = 1;
+// 	this.color1 = 0;
+// 	this.color2 = 0;
+// 	this.grad = 0;
+// 	this.offset = 0.5;
 
-	this.update = function() {
-		this.vel.add(this.acc);
-		this.pos.add(this.vel);
+// 	this.update = function() {
+// 		this.vel.add(this.acc);
+// 		this.pos.add(this.vel);
 		
-		// --- 修改部分：减缓次级粒子的变化速度 ---
-		this.alpha1 += random(0.1, 0.2);
-		this.alpha2 -= random(0.1, 0.2);
-		this.r += 0.002; // 减缓半径增长
-	}
+// 		// --- 修改部分：减缓次级粒子的变化速度 ---
+// 		this.alpha1 += random(0.1, 0.2);
+// 		this.alpha2 -= random(0.1, 0.2);
+// 		this.r += 0.002; // 减缓半径增长
+// 	}
 
-	this.show = function() {
-		noStroke();
-		fill(0);
-		this.grad = drawingContext.createRadialGradient(this.pos.x + random(-this.offset,this.offset), this.pos.y + random(-this.offset,this.offset), 0, 
-																										this.pos.x + random(-this.offset,this.offset), this.pos.y + random(-this.offset,this.offset), this.r);
-		this.grad.addColorStop(0.25, this.color1);
-		this.grad.addColorStop(0.95, this.color2);
-		drawingContext.fillStyle = this.grad;
-		rectMode(CENTER);
-		rect(this.pos.x, this.pos.y,  random(1), this.r);
-	}
+// 	this.show = function() {
+// 		noStroke();
+// 		fill(0);
+// 		this.grad = drawingContext.createRadialGradient(this.pos.x + random(-this.offset,this.offset), this.pos.y + random(-this.offset,this.offset), 0, 
+// 																										this.pos.x + random(-this.offset,this.offset), this.pos.y + random(-this.offset,this.offset), this.r);
+// 		this.grad.addColorStop(0.25, this.color1);
+// 		this.grad.addColorStop(0.95, this.color2);
+// 		drawingContext.fillStyle = this.grad;
+// 		rectMode(CENTER);
+// 		rect(this.pos.x, this.pos.y,  random(1), this.r);
+// 	}
 
-	this.finished = function() {
-		return this.alpha2 < 2;
-	};
-}
+// 	this.finished = function() {
+// 		return this.alpha2 < 2;
+// 	};
+// }
