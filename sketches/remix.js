@@ -8,13 +8,14 @@ function setup() {
 	randomSeed(seed);
 	mySize = min(800, 500);
 	createCanvas(800, 500);
-	colorMode(RGB, 255, 255, 225, 100);
+	colorMode(HSB);
   background("#000")
-	parNum = 10000;
+	parNum = 1000;
 	for (let i = 0; i < parNum; i++) {
 		particles.push(new Particle(random(width), height / 2 - tan(random(1,2) * i + random(50)) * height / 30));
 	}
 	color_vision = random([1, 2, 3, 4, 5])
+  strokeWeight(10);
 }
 
 function draw() {
