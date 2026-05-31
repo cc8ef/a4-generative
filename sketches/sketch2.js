@@ -20,9 +20,9 @@ function setup() {
 	randomSeed(seed);
 	mySize = min(windowWidth, windowHeight);
 	createCanvas(windowWidth, windowHeight);
-	colorMode(RGB, 100, 90, 10, 50);
+	colorMode(RGB, 255, 255, 255, 100);
 	// 保持白色背景，或者你可以改成 "#f0f0f0" 稍微灰一点
-	background("#000");
+	background("#be1010");
 	parNum = 2000;
 	for (let i = 0; i < parNum; i++) {
 		particles.push(new Particle(random(width),height / 2 - tan(random(1,2) * i + random(50)) * height / 30));
