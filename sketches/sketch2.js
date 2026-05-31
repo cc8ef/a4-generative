@@ -27,7 +27,7 @@ function setup() {
 	for (let i = 0; i < parNum; i++) {
 		particles.push(new Particle(random(width),height / 2 - tan(random(1,2) * i + random(50)) * height / 30));
 	}
-	color_vision = random([1, 2])
+	color_vision = random([1, 2, 3, 4, 5])
 }
 
 function draw() {
