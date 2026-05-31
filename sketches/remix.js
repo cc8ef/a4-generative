@@ -3,6 +3,7 @@ var particles = [];
 var mySize;
 var parNum;
 var color_vision;
+var drawColor;
 
 function setup() {
 	randomSeed(seed);
@@ -77,6 +78,7 @@ function Particle(x, y) {
 			this.color2 = color(150, 150, 150, this.alpha2);
 		}
 		
+    drawColor = this.color2;
 		this.vel.add(this.acc);
 		this.pos.add(this.vel);
 		
@@ -117,8 +119,7 @@ function Particle(x, y) {
 }
 
 function mouseDragged() {
-  let lineHue = this.color_vision = random([1,2,3,4,5]);
-  stroke(lineHue, 90, 90);
+  stroke(drawColor, 90, 90);
   line(pmouseX, pmouseY, mouseX, mouseY);
 }
 
