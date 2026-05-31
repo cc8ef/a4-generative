@@ -10,7 +10,7 @@
 // by SamuelYAN
 // modified to Grayscale & Long Duration
 
-var seed = Math.random() * 2000;
+var seed = Math.random() * 5000;
 var particles = [];
 var mySize;
 var parNum;
