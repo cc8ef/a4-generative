@@ -10,9 +10,9 @@ function setup() {
 	createCanvas(800, 500);
 	colorMode(RGB, 255, 255, 225, 100);
   background("#000")
-	parNum = 2000;
+	parNum = 10000;
 	for (let i = 0; i < parNum; i++) {
-		particles.push(new Particle(random(width),height / 2 - tan(random(1,2) * i + random(50)) * height / 30));
+		particles.push(new Particle(random(width), height / 2 - tan(random(1,2) * i + random(50)) * height / 30));
 	}
 	color_vision = random([1, 2, 3, 4, 5])
 }
@@ -48,7 +48,6 @@ function Particle(x, y) {
 	this.alpha1 = int(random(100));
 	this.alpha2 = 100;
 	this.r = random(height / random(800,400)) * random(35, 25);
-	this.particles2 = [];
 	this.color1 = 0;
 	this.color2 = 0;
 	this.grad = 0;
@@ -84,7 +83,7 @@ function Particle(x, y) {
 		this.alpha1 += random(0.1, 0.2);
 		
 		if (this.r > 1) {
-			this.r -= 0.005; // 原来是 0.025
+			this.r -= 0.005;
 		}
 	};
 
@@ -107,16 +106,6 @@ function Particle(x, y) {
 			this.particles2[i].r = this.r / 10;
 			if (this.r < 15) {
 				this.r += 0.01;
-			}
-			this.particles2[i].color1 = this.color1;
-			this.particles2[i].color2 = this.color2;
-			this.particles2[i].alpha1 = this.alpha1/20;
-			this.particles2[i].alpha2 = this.alpha2/20;
-			this.particles2[i].show();
-			this.particles2[i].update();
-
-			if (this.particles2[i].finished()) {
-				this.particles2.splice(i, 1);
 			}
 		}
 	};
