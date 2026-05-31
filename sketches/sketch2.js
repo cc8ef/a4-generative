@@ -10,7 +10,7 @@
 // by SamuelYAN
 // modified to Grayscale & Long Duration
 
-var seed = Math.random() * 5000;
+var seed = Math.random() * 2000;
 var particles = [];
 var mySize;
 var parNum;
@@ -20,7 +20,7 @@ function setup() {
 	randomSeed(seed);
 	mySize = min(windowWidth, windowHeight);
 	createCanvas(windowWidth, windowHeight);
-	colorMode(RGB, 255, 255, 255, 100);
+	colorMode(RGB, 100, 90, 10, 50);
 	// 保持白色背景，或者你可以改成 "#f0f0f0" 稍微灰一点
 	background("#000");
 	parNum = 2000;
