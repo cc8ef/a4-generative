@@ -9,8 +9,8 @@ function setup() {
 }
 
 function draw() {
-  background(000);
-  
+  background(0);
+
 var seed = Math.random() * 2000;
 var particles = [];
 var mySize;
@@ -20,7 +20,7 @@ var color_vision;
 function setup() {
 	randomSeed(seed);
 	mySize = min(windowWidth, windowHeight);
-	createCanvas(windowWidth, windowHeight);
+	createCanvas(800, 500);
 	colorMode(RGB, 255, 255, 255, 100);
 	// 保持白色背景，或者你可以改成 "#f0f0f0" 稍微灰一点
 	background("#000");
