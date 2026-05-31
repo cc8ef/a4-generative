@@ -3,13 +3,13 @@ function setup() {
   createCanvas(710, 400);
 
   // Set background to black
-  background(255, 0, 0);
+  background(0);
 
   // Set width of the lines
   strokeWeight(10);
 
   // Set color mode to hue-saturation-brightness (HSB)
-  colorMode(HSB);
+  colorMode(RGB);
 
   // Set screen reader accessible description
   describe('A blank canvas where the user draws by dragging the mouse');
