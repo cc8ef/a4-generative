@@ -19,10 +19,9 @@ var color_vision;
 
 function setup() {
 	randomSeed(seed);
-	mySize = min(windowWidth, windowHeight);
+	mySize = min(800, 500);
 	createCanvas(800, 500);
-	colorMode(RGB, 255, 255, 255, 100);
-	// 保持白色背景，或者你可以改成 "#f0f0f0" 稍微灰一点
+	colorMode(RGB, 255, 255, 225, 100);
 	background("#000");
 	parNum = 2000;
 	for (let i = 0; i < parNum; i++) {
@@ -33,9 +32,6 @@ function setup() {
 
 function draw() {
 	blendMode(BLEND);
-	// 如果需要残影效果可以取消下面这行的注释
-	// background(255, 255, 255, 5); 
-	
 	for (let i = particles.length - 1; i > 0; i--) {
 		if (i < particles.length) {
 			if (int(seed) % 2 == 0) {
