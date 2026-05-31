@@ -123,4 +123,8 @@ function mouseDragged() {
   line(pmouseX, pmouseY, mouseX, mouseY);
 }
 
-
+function keyTyped() {
+	if (key === "r" || key === "R") {
+		location.reload();
+	}
+}
