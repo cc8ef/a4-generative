@@ -22,12 +22,12 @@ function setup() {
 	createCanvas(windowWidth, windowHeight);
 	colorMode(RGB, 255, 255, 255, 100);
 	// 保持白色背景，或者你可以改成 "#f0f0f0" 稍微灰一点
-	background("#be1010");
+	background("#000000");
 	parNum = 2000;
 	for (let i = 0; i < parNum; i++) {
 		particles.push(new Particle(random(width),height / 2 - tan(random(1,2) * i + random(50)) * height / 30));
 	}
-	color_vision = random([1, 2, 3, 4, 5])
+	color_vision = random([1, 2])
 }
 
 function draw() {
