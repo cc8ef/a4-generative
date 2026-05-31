@@ -17,11 +17,6 @@ function setup() {
 	color_vision = random([1, 2, 3, 4, 5])
   strokeWeight(10);
 }
-function mouseDragged() {
-  let lineHue = mouseX - mouseY;
-  stroke(lineHue, 45, 45);
-  line(pmouseX, pmouseY, mouseX, mouseY);
-}
 
 function draw() {
 	blendMode(BLEND);
@@ -119,6 +114,12 @@ function Particle(x, y) {
 	this.finished = function() {
 		return this.alpha2 < 10;
 	};
+}
+
+function mouseDragged() {
+  let lineHue = this.color_vision = random([1,2,3,4,5]);
+  stroke(lineHue, 90, 90);
+  line(pmouseX, pmouseY, mouseX, mouseY);
 }
 
 
