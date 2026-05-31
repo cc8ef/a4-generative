@@ -1,13 +1,26 @@
-// =============================================
-// sketch1.js — your first source sketch
-// Paste your source sketch code here and start hacking
-// =============================================
-
 function setup() {
-  createCanvas(800, 500);
+  // Create the canvas
+  createCanvas(710, 400);
+
+  // Set background to black
+  background(0);
+
+  // Set width of the lines
+  strokeWeight(10);
+
+  // Set color mode to hue-saturation-brightness (HSB)
+  colorMode(HSB);
+
+  // Set screen reader accessible description
+  describe('A blank canvas where the user draws by dragging the mouse');
 }
 
-function draw() {
-  background(220);
-  // your code here
+function mouseDragged() {
+  // Set the color based on the mouse position, and draw a line
+  // from the previous position to the current position
+  let lineHue = mouseX - mouseY;
+  stroke(lineHue, 90, 90);
+  line(pmouseX, pmouseY, mouseX, mouseY);
 }
+
+

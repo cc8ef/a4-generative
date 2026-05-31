@@ -1,14 +1,14 @@
 {
   "sketch1": {
-    "title": "source 1 title",
-    "author": "source 1 author",
-    "date": "source 1 date",
+    "title": "Drawing Lines",
+    "author": "Darren Kessner",
+    "date": "March 15th, 2024",
     "source": "source 1 url"
   },
   "sketch2": {
-    "title": "source 2 title",
-    "author": "source 2 author",
-    "date": "source 2 date",
-    "source": "source 2 url"
+    "title": "Mood_05_2",
+    "author": "jingjingdong",
+    "date": "April 18th, 2026",
+    "source": "https://openprocessing.org/@u104467/2920053"
   }
 }
