@@ -3,7 +3,7 @@ function setup() {
   createCanvas(710, 400);
 
   // Set background to black
-  background(0);
+  background(255, 0, 0);
 
   // Set width of the lines
   strokeWeight(10);
